@@ -584,31 +584,61 @@
 
   /* ====== Plantas ====== */
   .plants {
-    display: grid; gap: 14px;
-    grid-template-columns: 1fr 1fr;
+    display: grid; gap: 18px;
+    grid-template-columns: 1fr;
   }
-  @media (min-width: 720px) { .plants { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
-  .plants .p {
+  @media (min-width: 720px) { .plants { grid-template-columns: 1fr 1fr; gap: 22px; } }
+  .plant-card {
     background: #fff;
     border-radius: 14px;
-    overflow: hidden;
     border: 1px solid var(--line);
     box-shadow: var(--shadow-soft);
+    overflow: hidden;
+  }
+  .plant-card .plant-header {
+    padding: 14px 16px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    background: var(--cream-2);
+  }
+  .plant-card .plant-header b {
+    display: block;
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--green-d);
+    font-weight: 700;
+  }
+  .plant-card .plant-header span {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .plant-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;
+  }
+  .plants .p {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--line);
     text-align: center;
   }
   .plants .p .img {
     aspect-ratio: 1/1;
     background: #efece4;
     display: flex; align-items: center; justify-content: center;
-    padding: 10px;
+    padding: 8px;
   }
   .plants .p img { max-width: 100%; max-height: 100%; object-fit: contain; }
-  .plants .p .meta { padding: 10px 12px; }
+  .plants .p .meta { padding: 8px 10px; }
   .plants .p .meta b {
-    display: block; font-size: 13px; color: var(--green-d);
+    display: block; font-size: 12px; color: var(--green-d);
     font-family: var(--serif);
   }
-  .plants .p .meta span { font-size: 12px; color: var(--muted); }
 
   /* ====== Localização ====== */
   .loc {
@@ -1007,17 +1037,38 @@
     </div>
 
     <div class="plants reveal">
-      <div class="p">
-        <div class="img"><img src="assets/criativos/planta4047m2.png" alt="Planta 40,47m²" /></div>
-        <div class="meta"><b>Planta 40,47m²</b><span>+ garden privativo</span></div>
+      <div class="plant-card">
+        <div class="plant-header">
+          <b>Planta Tipo 40,47m²</b>
+          <span>+ garden privativo de 17m²</span>
+        </div>
+        <div class="plant-pair">
+          <div class="p">
+            <div class="img"><img src="assets/criativos/planta4047m2.png" alt="Planta Tipo 40,47m²" /></div>
+            <div class="meta"><b>Planta Tipo</b></div>
+          </div>
+          <div class="p">
+            <div class="img"><img src="assets/criativos/Garden4047m2.png" alt="Garden 40,47m²" /></div>
+            <div class="meta"><b>Garden</b></div>
+          </div>
+        </div>
       </div>
-      <div class="p">
-        <div class="img"><img src="assets/criativos/Garden4047m2.png" alt="Planta Garden 40,47m²" /></div>
-        <div class="meta"><b>Garden 40,47m²</b><span>com garden 17–18m²</span></div>
-      </div>
-      <div class="p">
-        <div class="img"><img src="assets/criativos/Planta4102m2.png" alt="Planta 41,02m²" /></div>
-        <div class="meta"><b>Planta 41,02m²</b><span>+ garden privativo</span></div>
+
+      <div class="plant-card">
+        <div class="plant-header">
+          <b>Planta Tipo 41,02m²</b>
+          <span>+ garden privativo de 18m²</span>
+        </div>
+        <div class="plant-pair">
+          <div class="p">
+            <div class="img"><img src="assets/criativos/Planta4102m2.png" alt="Planta Tipo 41,02m²" /></div>
+            <div class="meta"><b>Planta Tipo</b></div>
+          </div>
+          <div class="p">
+            <div class="img"><img src="assets/criativos/Garden4102m2.png" alt="Garden 41,02m²" /></div>
+            <div class="meta"><b>Garden</b></div>
+          </div>
+        </div>
       </div>
     </div>
 
