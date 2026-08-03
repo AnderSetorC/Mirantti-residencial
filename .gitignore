@@ -1,0 +1,28 @@
+# ============== Pastas locais que NÃO vão pro deploy ==============
+# Materiais de apoio (PDF, hub de copy, vídeos pesados, originais de fotos)
+_materiais/
+Mirantti-Material/
+Mirantti-Material_DELETEME/
+
+# ============== Configurações do editor ==============
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ============== Logs / temporários ==============
+*.log
+*.tmp
+*.bak
+
+# ============== Variáveis de ambiente ==============
+.env
+.env.local
+.env.*.local
+
+# ============== Dependências (não usamos aqui, mas caso entre um build) ==============
+node_modules/
+.pnp
+.pnp.js

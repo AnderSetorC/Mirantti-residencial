@@ -1,0 +1,1291 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#1d3525" />
+<title>Residencial Mirantti — Seu próximo capítulo começa aqui | Blendi Londrina</title>
+<meta name="description" content="Condomínio-clube em Londrina/PR com piscina, academia, salão de festas, playground, espaço pet e mais. Apartamentos de 40m² com garden. Aceita Minha Casa Minha Vida com subsídio de até R$ 75 mil. Parcelas a partir de R$ 588." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Paleta extraída da identidade visual */
+    --cream:    #f6efde;
+    --cream-2:  #efe5c8;
+    --green-d:  #1d3525;
+    --green-d2: #14261b;
+    --green-l:  #b8d33d;
+    --green-l2: #94b41e;
+    --terra:    #b08968;
+    --ink:      #1d1f1c;
+    --muted:    #6b6e68;
+    --line:     #e6e4dc;
+    --wa:       #25d366;
+    --logo-blue: #a3d4ed;
+
+    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --sans:  "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+    --radius: 14px;
+    --shadow-soft: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(20,30,5,.06);
+    --shadow-pop:  0 18px 40px rgba(15,40,20,.18);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  @media (min-width: 720px) { .container { padding: 0 28px; } }
+
+  /* ====== HERO ====== */
+  .hero {
+    position: relative;
+    background:
+      radial-gradient(ellipse at 70% 0%, rgba(184,211,61,.18), transparent 60%),
+      var(--cream);
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: auto 0 -1px 0;
+    height: 120px;
+    background: var(--green-d);
+    clip-path: polygon(0 100%, 100% 100%, 100% 40%, 0 100%);
+    z-index: 1;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 0;
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: transparent;
+    position: relative;
+    z-index: 3;
+  }
+  @media (min-width: 720px) {
+    .nav {
+      margin: 0 -28px;
+      padding: 18px 28px;
+      gap: 20px;
+    }
+  }
+  .nav .brand {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav .brand img {
+    height: 84px; width: auto;
+    filter: drop-shadow(0 2px 6px rgba(20,40,60,.10));
+  }
+  @media (min-width: 720px) {
+    .nav .brand img { height: 110px; }
+  }
+  .nav .nav-cta {
+    background: var(--wa);
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 11px 16px;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: var(--shadow-soft);
+    transition: transform .12s ease;
+    white-space: nowrap;
+  }
+  @media (min-width: 720px) { .nav .nav-cta { font-size: 14px; padding: 13px 20px; } }
+  .nav .nav-cta:hover { transform: translateY(-1px); }
+  .nav-cta svg { width: 18px; height: 18px; }
+
+  .hero-inner {
+    display: grid;
+    gap: 28px;
+    padding: 18px 0 100px;
+    position: relative;
+    z-index: 2;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .hero-inner {
+      grid-template-columns: 1.05fr .95fr;
+      gap: 44px;
+      padding: 36px 0 140px;
+    }
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--green-d);
+    font-size: 12px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase;
+    padding: 8px 12px; border-radius: 999px;
+  }
+  .hero-eyebrow .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--green-l2);
+    box-shadow: 0 0 0 4px rgba(148,180,30,.22);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(32px, 6.5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -.015em;
+    margin: 14px 0 14px;
+    color: var(--green-d);
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green-l2);
+  }
+  .hero p.lead {
+    font-size: clamp(15px, 2vw, 17px);
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 56ch;
+    margin: 0 0 22px;
+  }
+  .hero-cta {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 22px;
+  }
+  .btn {
+    appearance: none; border: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--sans);
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 13px 18px;
+    font-size: 14px;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    line-height: 1.2;
+  }
+  .btn-primary {
+    background: var(--wa);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(37,211,102,.30);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(37,211,102,.40); }
+  .btn-ghost {
+    background: #fff;
+    color: var(--green-d);
+    border: 1px solid var(--line);
+  }
+  .btn-ghost:hover { background: var(--cream-2); }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .hero-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 6px;
+  }
+  @media (min-width: 720px) { .hero-strip { grid-template-columns: repeat(4, 1fr); } }
+  .hero-strip .item {
+    background: rgba(255,255,255,.6);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(29,53,37,.10);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .hero-strip .item .v {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--green-d);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .hero-strip .item .k {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .hero-visual {
+    position: relative;
+    min-height: 320px;
+  }
+  .hero-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow-pop);
+    aspect-ratio: 4/5;
+    background: #efece4;
+  }
+  .hero-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  @keyframes kenburns {
+    from { transform: scale(1.0) translate(0,0); }
+    to   { transform: scale(1.08) translate(-1%, -1%); }
+  }
+  .hero-card .ribbon {
+    position: absolute;
+    bottom: 16px; left: 16px;
+    background: rgba(255,255,255,.92);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green-d);
+    box-shadow: var(--shadow-soft);
+    z-index: 3;
+  }
+  .hero-card .ribbon span {
+    display: block;
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .hero-card .corner {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: var(--green-l);
+    color: var(--green-d2);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    z-index: 3;
+  }
+
+  /* Slideshow do hero */
+  .hero-card .slides {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-card .slides img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+    animation: kenburns 14s ease-in-out infinite alternate;
+  }
+  .hero-card .slides img.is-active {
+    opacity: 1;
+  }
+  .hero-card .dots-slides {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display: flex; gap: 6px;
+    z-index: 4;
+  }
+  .hero-card .dots-slides span {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    transition: background .2s ease, transform .2s ease, width .2s ease;
+  }
+  .hero-card .dots-slides span.is-active {
+    background: #fff;
+    width: 22px;
+    border-radius: 999px;
+  }
+
+  /* ====== Faixa letreiro ====== */
+  .marquee {
+    background: var(--green-d);
+    color: var(--cream);
+    overflow: hidden;
+    position: relative;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .marquee .track {
+    display: inline-flex; gap: 48px;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+  }
+  .marquee span {
+    font-family: var(--serif);
+    font-size: clamp(20px, 3vw, 28px);
+    letter-spacing: -.01em;
+    display: inline-flex; align-items: center; gap: 16px;
+  }
+  .marquee span::after {
+    content: "";
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: var(--green-l);
+    border-radius: 50%;
+  }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ====== Seções genéricas ====== */
+  section { padding: 64px 0; }
+  @media (min-width: 720px) { section { padding: 88px 0; } }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--green-l2);
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4.5vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    margin: 0 0 12px;
+    color: var(--green-d);
+  }
+  h2 em { font-style: normal; color: var(--terra); }
+  .lead { font-size: 16px; line-height: 1.65; color: var(--ink); max-width: 64ch; margin: 0 0 22px; }
+  .lead-2 { color: var(--muted); font-size: 14px; margin: 0 0 28px; max-width: 64ch; }
+
+  .section-cream  { background: var(--cream); color: var(--ink); }
+  .section-green  { background: var(--green-d); color: var(--cream); }
+  .section-green h2 { color: var(--cream); }
+  .section-green .lead, .section-green .lead-2 { color: rgba(246,239,222,.82); }
+  .section-green .section-eyebrow { color: var(--green-l); }
+  .section-soft   { background: var(--cream-2); color: var(--ink); }
+
+  /* ====== Sobre ====== */
+  .sobre {
+    display: grid; gap: 28px;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 880px) { .sobre { grid-template-columns: 1.1fr .9fr; gap: 56px; } }
+
+  .sobre-photo {
+    border-radius: 22px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-soft);
+    background: #efece4;
+  }
+  .sobre-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ====== Galeria/Carrossel ====== */
+  .gallery {
+    position: relative;
+  }
+  .gallery-track {
+    display: flex; gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 20px 18px;
+    margin: 0 -20px;
+    scrollbar-width: none;
+  }
+  .gallery-track::-webkit-scrollbar { display: none; }
+  @media (min-width: 720px) {
+    .gallery-track { margin: 0 -28px; padding: 6px 28px 18px; }
+  }
+  .gallery-track .card {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #efece4;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    aspect-ratio: 4/3;
+  }
+  @media (min-width: 720px) { .gallery-track .card { flex: 0 0 38%; } }
+  @media (min-width: 1024px) { .gallery-track .card { flex: 0 0 30%; } }
+  .gallery-track img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .6s ease;
+  }
+  .gallery-track .card:hover img { transform: scale(1.04); }
+  .gallery-track .label {
+    position: absolute; left: 12px; bottom: 12px;
+    background: rgba(255,255,255,.94);
+    color: var(--green-d);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px; font-weight: 600;
+  }
+  .gallery-controls {
+    display: flex; gap: 8px; margin-top: 12px;
+    align-items: center;
+  }
+  .gallery-controls button {
+    appearance: none;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--green-d);
+    cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: background .12s ease, color .12s ease;
+  }
+  .gallery-controls button:hover { background: var(--green-l); }
+  .gallery-controls button svg { width: 18px; height: 18px; }
+  .gallery-controls .dots {
+    flex: 1; display: flex; gap: 6px; justify-content: center;
+  }
+  .gallery-controls .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--line);
+    transition: background .12s ease, transform .12s ease;
+  }
+  .gallery-controls .dot.active { background: var(--green-l2); transform: scale(1.4); }
+
+  /* Grid 2 colunas */
+  .grid-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+    gap: 10px;
+  }
+  @media (min-width: 720px) {
+    .grid-photos {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 130px;
+      gap: 12px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .grid-photos {
+      grid-auto-rows: 155px;
+      gap: 14px;
+    }
+  }
+  .grid-photos .ph {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #efece4;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+  }
+  .grid-photos .ph img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+  }
+  .grid-photos .ph:hover img { transform: scale(1.05); }
+  /* Mosaico: destaques ocupam 2 colunas ou 2 linhas */
+  .grid-photos .ph.wide { grid-column: span 2; }
+  .grid-photos .ph.tall { grid-row: span 2; }
+  .grid-photos .ph.big { grid-column: span 2; grid-row: span 2; }
+  /* Legenda sutil no hover */
+  .grid-photos .ph::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(15,40,20,.55) 100%);
+    opacity: 0; transition: opacity .25s ease;
+  }
+  .grid-photos .ph:hover::after { opacity: 1; }
+  .grid-photos .ph .tag {
+    position: absolute;
+    left: 10px; bottom: 10px;
+    color: #fff;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: .02em;
+    z-index: 2;
+    opacity: 0; transform: translateY(6px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .grid-photos .ph:hover .tag { opacity: 1; transform: translateY(0); }
+
+  /* ====== Lazer ====== */
+  .lazer {
+    display: grid; gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 880px) { .lazer { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .lazer-list {
+    list-style: none; padding: 0; margin: 0;
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .lazer-list li {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .lazer-list li::before {
+    content: "✓";
+    display: inline-flex;
+    width: 22px; height: 22px;
+    align-items: center; justify-content: center;
+    background: var(--green-l);
+    color: var(--green-d2);
+    border-radius: 50%;
+    font-size: 12px; font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* ====== Números / Faixa destaque ====== */
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  @media (min-width: 720px) { .numbers { grid-template-columns: repeat(4, 1fr); } }
+  .numbers .n {
+    background: var(--green-d);
+    color: var(--cream);
+    border-radius: 16px;
+    padding: 20px 18px;
+    text-align: center;
+    border: 1px solid rgba(184,211,61,.18);
+  }
+  .numbers .n .v {
+    font-family: var(--serif);
+    font-size: 32px;
+    color: var(--green-l);
+    line-height: 1.05;
+  }
+  .numbers .n .k {
+    margin-top: 6px;
+    font-size: 12px;
+    color: rgba(246,239,222,.7);
+    letter-spacing: .04em;
+  }
+
+  /* ====== Plantas ====== */
+  .plants {
+    display: grid; gap: 14px;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 720px) { .plants { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
+  .plants .p {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+  }
+  .plants .p .img {
+    aspect-ratio: 1/1;
+    background: #efece4;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px;
+  }
+  .plants .p img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .plants .p .meta { padding: 10px 12px; }
+  .plants .p .meta b {
+    display: block; font-size: 13px; color: var(--green-d);
+    font-family: var(--serif);
+  }
+  .plants .p .meta span { font-size: 12px; color: var(--muted); }
+
+  /* ====== Localização ====== */
+  .loc {
+    display: grid; gap: 24px;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 880px) { .loc { grid-template-columns: 1fr 1fr; gap: 48px; } }
+  .loc-map {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #efece4;
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 4/3;
+  }
+  .loc-map img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ====== Lifestyle - carrossel interno ====== */
+  .lifestyle-track {
+    display: flex; gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 0 18px;
+    scrollbar-width: none;
+  }
+  .lifestyle-track::-webkit-scrollbar { display: none; }
+  .lifestyle-track .slide {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background: #efece4;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+  }
+  @media (min-width: 720px) { .lifestyle-track .slide { flex: 0 0 32%; } }
+  .lifestyle-track img { width: 100%; height: 100%; object-fit: cover; }
+  .lifestyle-track .caption {
+    position: absolute; left: 12px; bottom: 12px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,.45);
+    font-size: 13px; font-weight: 600;
+  }
+
+  /* ====== CTA final ====== */
+  .cta-final {
+    background: var(--green-d);
+    color: var(--cream);
+    text-align: center;
+    border-top: 1px solid rgba(184,211,61,.18);
+    border-bottom: 1px solid rgba(184,211,61,.18);
+  }
+  .cta-final h2 { color: var(--cream); }
+  .cta-final .lead { color: rgba(246,239,222,.85); margin-left: auto; margin-right: auto; }
+  .cta-final .pill-row {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    margin: 6px 0 26px;
+  }
+  .cta-final .pill {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(184,211,61,.30);
+    color: var(--cream);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* ====== Footer ====== */
+  footer.foot {
+    background: var(--green-d);
+    color: rgba(246,239,222,.78);
+    padding: 44px 0 90px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .foot .logos {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+    margin-bottom: 18px;
+  }
+  .foot .logos .chip {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  }
+  .foot .logos img { height: 36px; width: auto; display: block; }
+  .foot .row {
+    display: grid; gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 720px) { .foot .row { grid-template-columns: 1.4fr 1fr 1fr; } }
+  .foot h4 {
+    font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--green-l); margin: 0 0 10px;
+  }
+  .foot a { color: rgba(246,239,222,.9); }
+  .foot a:hover { color: #fff; }
+  .foot .legal {
+    border-top: 1px solid rgba(255,255,255,.10);
+    margin-top: 22px; padding-top: 14px;
+    font-size: 11px; color: rgba(246,239,222,.55);
+  }
+
+  /* ====== Botão WhatsApp flutuante ====== */
+  .wa-fab {
+    position: fixed;
+    right: 16px; bottom: 16px;
+    z-index: 80;
+    background: var(--wa);
+    color: #fff;
+    border-radius: 999px;
+    padding: 14px 18px;
+    font-weight: 700; font-size: 14px;
+    display: inline-flex; align-items: center; gap: 10px;
+    box-shadow: 0 14px 32px rgba(37,211,102,.45);
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  @media (min-width: 720px) {
+    .wa-fab { right: 28px; bottom: 28px; padding: 16px 22px; font-size: 15px; }
+  }
+  .wa-fab:hover { transform: translateY(-2px); }
+  .wa-fab svg { width: 22px; height: 22px; }
+  .wa-fab .pulse-ring {
+    position: absolute; inset: 0;
+    border-radius: 999px;
+    box-shadow: 0 0 0 0 rgba(37,211,102,.55);
+    animation: ring 2.4s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.03); }
+  }
+  @keyframes ring {
+    0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.55); }
+    70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+
+  /* ====== Animação on-scroll ====== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* Botão WhatsApp inline (seções) */
+  .inline-cta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="#topo" aria-label="Residencial Mirantti">
+        <img src="assets/logos/logo-miranti-transparente.png" alt="Residencial Mirantti" />
+      </a>
+      <a class="nav-cta" data-wa="nav" href="#" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43zM12.05 21.8h-.01a9.86 9.86 0 01-5.02-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.85 9.85 0 01-1.51-5.28c0-5.45 4.43-9.88 9.87-9.88 2.64 0 5.11 1.03 6.97 2.89a9.8 9.8 0 012.89 6.99c0 5.45-4.43 9.88-9.87 9.88zm5.41-7.39c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46a8.95 8.95 0 01-1.65-2.04c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </nav>
+
+    <div class="hero-inner" id="topo">
+      <div class="hero-text">
+        <span class="hero-eyebrow"><span class="dot"></span> Lançamento · Londrina/PR</span>
+        <h1>Seu próximo capítulo<br/>começa no <em>Mirantti</em>.</h1>
+        <p class="lead">
+          Condomínio-clube com piscina, academia, salão de festas, playground, espaço pet e mais.
+          Apartamentos de 40m² com garden privativo. Aceita <strong>Minha Casa Minha Vida</strong>
+          com subsídio de até <strong>R$ 75 mil</strong> e parcelas a partir de <strong>R$ 588/mês</strong>.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" data-wa="hero_principal" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+            Simule grátis no WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#lazer">Ver lazer completo</a>
+        </div>
+
+        <div class="hero-strip">
+          <div class="item"><div class="v">R$ 588</div><div class="k">a parcela</div></div>
+          <div class="item"><div class="v">R$ 75 mil</div><div class="k">subsídio MCMV</div></div>
+          <div class="item"><div class="v">416</div><div class="k">unidades</div></div>
+          <div class="item"><div class="v">13</div><div class="k">blocos · 4 andares</div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card" data-hero-slides>
+          <div class="slides">
+            <img class="is-active" src="assets/hero/familia-hero-1.jpg" alt="Família feliz no Residencial Mirantti" />
+            <img src="assets/hero/familia-hero-2.jpg" alt="Casal feliz no Mirantti" />
+            <img src="assets/hero/familia-hero-3.jpg" alt="Casal celebrando o novo lar" />
+          </div>
+          <div class="corner">Lançamento</div>
+          <div class="ribbon">
+            Rua Álvaro Grotti, 325
+            <span>Londrina/PR · pertinho da Tanganica</span>
+          </div>
+          <div class="dots-slides" aria-hidden="true">
+            <span class="is-active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== Faixa letreiro ========== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Seu próximo capítulo começa aqui</span>
+    <span>Condomínio-clube em Londrina</span>
+    <span>Parcelas a partir de R$ 588</span>
+    <span>Subsídio MCMV até R$ 75 mil</span>
+    <span>Seu pet também mora com conforto</span>
+    <span>Lazer para todas as fases da vida</span>
+    <!-- duplicado para loop contínuo -->
+    <span>Seu próximo capítulo começa aqui</span>
+    <span>Condomínio-clube em Londrina</span>
+    <span>Parcelas a partir de R$ 588</span>
+    <span>Subsídio MCMV até R$ 75 mil</span>
+    <span>Seu pet também mora com conforto</span>
+    <span>Lazer para todas as fases da vida</span>
+  </div>
+</div>
+
+<!-- ========== SOBRE ========== -->
+<section class="section-cream" id="sobre">
+  <div class="container">
+    <div class="sobre">
+      <div class="reveal">
+        <span class="section-eyebrow">O Empreendimento</span>
+        <h2>Onde cada conquista <em>ganha forma</em>.</h2>
+        <p class="lead">
+          Não é só um apartamento. É o lugar onde o seu filho vai crescer, onde você vai receber os amigos
+          nos fins de semana, onde o seu pet vai correr livre e onde cada pequena conquista vai virar uma
+          memória boa. A rotina vira algo especial quando o lar é o Mirantti.
+        </p>
+        <p class="lead-2">
+          Pensado nos mínimos detalhes para oferecer infraestrutura, lazer e tranquilidade para toda a família —
+          em um condomínio-clube completo, com áreas verdes, redário, horta e segurança 24h.
+        </p>
+        <div class="inline-cta">
+          <a class="btn btn-primary" data-wa="sobre" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+            Quero conhecer o Mirantti
+          </a>
+          <a class="btn btn-ghost" href="#plantas">Ver plantas</a>
+        </div>
+      </div>
+      <div class="sobre-photo reveal">
+        <img src="assets/criativos/area-lazer-comum.jpg" alt="Área de lazer comum do Mirantti" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Faixa de números ========== -->
+<section class="section-soft" style="padding: 36px 0;">
+  <div class="container">
+    <div class="numbers reveal">
+      <div class="n"><div class="v">24.948m²</div><div class="k">de terreno</div></div>
+      <div class="n"><div class="v">416</div><div class="k">unidades em 13 blocos</div></div>
+      <div class="n"><div class="v">40m²</div><div class="k">+ garden de 17 a 18m²</div></div>
+      <div class="n"><div class="v">R$ 75 mil</div><div class="k">subsídio MCMV</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALERIA 1: Vistas do condomínio ========== -->
+<section class="section-cream" id="condominio">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-eyebrow">O Condomínio</span>
+      <h2>Um novo começo para <em>Londrina</em>.</h2>
+      <p class="lead-2">Toque e arraste para ver mais imagens. Deslize pelos espaços e sinta o Mirantti.</p>
+    </div>
+
+    <div class="gallery reveal" data-gallery>
+      <div class="gallery-track">
+        <div class="card"><img src="assets/criativos/foto-condominio.jpg" alt="Vista do condomínio" /><div class="label">Condomínio</div></div>
+        <div class="card"><img src="assets/criativos/fotos-condominio (1).jpg" alt="Vista do condomínio 1" /><div class="label">Espaço comum</div></div>
+        <div class="card"><img src="assets/criativos/fotos-condominio (2).jpg" alt="Vista do condomínio 2" /><div class="label">Vista geral</div></div>
+        <div class="card"><img src="assets/criativos/fotos-condominio (3).jpg" alt="Vista do condomínio 3" /><div class="label">Portaria</div></div>
+        <div class="card"><img src="assets/criativos/fotos-condominio (4).jpg" alt="Vista do condomínio 4" /><div class="label">Entrada</div></div>
+        <div class="card"><img src="assets/criativos/fotos-condominio (5).jpg" alt="Vista do condomínio 5" /><div class="label">Circulação</div></div>
+      </div>
+      <div class="gallery-controls">
+        <button data-prev aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="dots" data-dots></div>
+        <button data-next aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="inline-cta reveal">
+      <a class="btn btn-primary" data-wa="galeria_condominio" href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+        Descubra o valor da sua parcela
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LAZER ========== -->
+<section class="section-green" id="lazer">
+  <div class="container">
+    <div class="lazer">
+      <div class="reveal">
+        <span class="section-eyebrow">Lazer Completo</span>
+        <h2>Tudo que um clube tem,<br/>dentro do seu <em>condomínio</em>.</h2>
+        <p class="lead">
+          Piscina, academia, salão de festas, churrasqueira, playground, mini quadra poliesportiva,
+          quadra de areia, redário, horta, espaço pet — lazer para todas as fases da vida, sem sair
+          de casa.
+        </p>
+        <ul class="lazer-list">
+          <li>Piscina</li>
+          <li>Academia</li>
+          <li>Salão de festas</li>
+          <li>Churrasqueira</li>
+          <li>Playground</li>
+          <li>Mini quadra</li>
+          <li>Quadra de areia</li>
+          <li>Redário</li>
+          <li>Horta</li>
+          <li>Espaço pet</li>
+          <li>Portaria 24h</li>
+          <li>Bicicletário</li>
+        </ul>
+        <div class="inline-cta">
+          <a class="btn btn-primary" data-wa="lazer" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+            Simule online agora
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-photos reveal">
+        <div class="ph tall"><img src="assets/criativos/piscina.jpg" alt="Piscina" /><span class="tag">Piscina</span></div>
+        <div class="ph"><img src="assets/criativos/salão-de-festa.jpg" alt="Salão de festas" /><span class="tag">Salão de festas</span></div>
+        <div class="ph"><img src="assets/criativos/churrasqueira-externa.jpg" alt="Churrasqueira externa" /><span class="tag">Churrasqueira</span></div>
+        <div class="ph"><img src="assets/criativos/quiosque.jpg" alt="Quiosque" /><span class="tag">Quiosque</span></div>
+        <div class="ph wide"><img src="assets/criativos/academia.jpg" alt="Academia" /><span class="tag">Academia</span></div>
+        <div class="ph"><img src="assets/criativos/playground.jpg" alt="Playground" /><span class="tag">Playground</span></div>
+        <div class="ph wide"><img src="assets/criativos/quadra-de-areia.jpg" alt="Quadra de areia" /><span class="tag">Quadra de areia</span></div>
+        <div class="ph"><img src="assets/criativos/quadra-esportiva.jpg" alt="Mini quadra esportiva" /><span class="tag">Mini quadra</span></div>
+        <div class="ph"><img src="assets/criativos/espaco-pet.jpg" alt="Espaço pet" /><span class="tag">Espaço pet</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Faixa letreiro 2 ========== -->
+<div class="marquee" aria-hidden="true" style="background: var(--green-l); color: var(--green-d2);">
+  <div class="track">
+    <span>Aceita Minha Casa Minha Vida</span>
+    <span>Subsídio de até R$ 75 mil</span>
+    <span>Parcelas a partir de R$ 588</span>
+    <span>Últimas unidades da tabela de lançamento</span>
+    <span>Garanta a sua agora</span>
+    <span>Aceita Minha Casa Minha Vida</span>
+    <span>Subsídio de até R$ 75 mil</span>
+    <span>Parcelas a partir de R$ 588</span>
+    <span>Últimas unidades da tabela de lançamento</span>
+    <span>Garanta a sua agora</span>
+  </div>
+</div>
+
+<!-- ========== PLANTAS ========== -->
+<section class="section-cream" id="plantas">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 30px;">
+      <span class="section-eyebrow">Plantas inteligentes</span>
+      <h2>40m² muito bem pensados + <em>garden privativo</em>.</h2>
+      <p class="lead-2" style="margin-left: auto; margin-right: auto;">
+        Duas opções de planta, ambas com garden privativo de 17 a 18m² para você cultivar,
+        relaxar ou criar o cantinho que sempre quis.
+      </p>
+    </div>
+
+    <div class="plants reveal">
+      <div class="p">
+        <div class="img"><img src="assets/criativos/planta4047m2.png" alt="Planta 40,47m²" /></div>
+        <div class="meta"><b>Planta 40,47m²</b><span>+ garden privativo</span></div>
+      </div>
+      <div class="p">
+        <div class="img"><img src="assets/criativos/Garden4047m2.png" alt="Planta Garden 40,47m²" /></div>
+        <div class="meta"><b>Garden 40,47m²</b><span>com garden 17–18m²</span></div>
+      </div>
+      <div class="p">
+        <div class="img"><img src="assets/criativos/Planta4102m2.png" alt="Planta 41,02m²" /></div>
+        <div class="meta"><b>Planta 41,02m²</b><span>+ garden privativo</span></div>
+      </div>
+    </div>
+
+    <div class="inline-cta reveal" style="justify-content: center;">
+      <a class="btn btn-primary" data-wa="plantas" href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+        Veja quanto subsídio você consegue
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== APARTAMENTO (cômodos) ========== -->
+<section class="section-soft" id="apartamento">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 28px;">
+      <span class="section-eyebrow">O Apartamento</span>
+      <h2>Cada cômodo pensado para <em>viver bem</em>.</h2>
+      <p class="lead-2" style="margin-left: auto; margin-right: auto;">
+        Sala, cozinha, quartos e garden — um layout funcional para o seu dia a dia.
+      </p>
+    </div>
+
+    <div class="lifestyle-track reveal">
+      <div class="slide"><img src="assets/criativos/sala-copa (1).jpg" alt="Sala e copa 1" /><div class="caption">Sala e copa</div></div>
+      <div class="slide"><img src="assets/criativos/sala-copa (2).jpg" alt="Sala e copa 2" /><div class="caption">Sala e copa</div></div>
+      <div class="slide"><img src="assets/criativos/cozinha.jpg" alt="Cozinha" /><div class="caption">Cozinha</div></div>
+      <div class="slide"><img src="assets/criativos/quarto-casal.jpg" alt="Quarto casal" /><div class="caption">Quarto casal</div></div>
+      <div class="slide"><img src="assets/criativos/quarto-solteiro.jpg" alt="Quarto solteiro" /><div class="caption">Quarto solteiro</div></div>
+      <div class="slide"><img src="assets/criativos/garden.jpg" alt="Garden privativo" /><div class="caption">Garden privativo</div></div>
+    </div>
+
+    <div class="inline-cta reveal" style="justify-content: center;">
+      <a class="btn btn-primary" data-wa="apartamento" href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+        Quero agendar uma visita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOCALIZAÇÃO ========== -->
+<section class="section-cream" id="localizacao">
+  <div class="container">
+    <div class="loc">
+      <div class="reveal">
+        <span class="section-eyebrow">Localização Estratégica</span>
+        <h2>Pertinho da <em>Tanganica</em>, no coração de Londrina.</h2>
+        <p class="lead">
+          Rua Álvaro Grotti, 325 — fácil acesso a escolas, mercados, farmácias e tudo o que você precisa.
+          Mais conveniência pra sua rotina, mais tempo pra viver o que importa.
+        </p>
+        <ul class="lazer-list" style="grid-template-columns: 1fr;">
+          <li>Escolas e universidades por perto</li>
+          <li>Mercados, farmácias e serviços</li>
+          <li>Acesso rápido às principais vias</li>
+          <li>Região em crescimento</li>
+        </ul>
+        <div class="inline-cta">
+          <a class="btn btn-primary" data-wa="localizacao" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+            Falar com um consultor
+          </a>
+        </div>
+      </div>
+      <div class="loc-map reveal">
+        <img src="assets/criativos/localizacao.png" alt="Mapa de localização do Residencial Mirantti" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BLOCOS ========== -->
+<section class="section-soft" style="padding: 36px 0;">
+  <div class="container">
+    <div class="reveal" style="display: grid; gap: 24px; grid-template-columns: 1fr; align-items: center;" id="blocos-wrap">
+      <img src="assets/criativos/blocos.jpg" alt="Vista dos blocos do Residencial Mirantti" style="border-radius: 18px; box-shadow: var(--shadow-soft); width: 100%; aspect-ratio: 16/9; object-fit: cover;" />
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA FINAL ========== -->
+<section class="cta-final">
+  <div class="container reveal">
+    <span class="section-eyebrow">Últimas unidades</span>
+    <h2>Garanta sua unidade na<br/>tabela de <em>lançamento</em>.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto;">
+      Condições especiais por tempo limitado. Parcelas a partir de R$ 588 com subsídio
+      de até R$ 75 mil do Minha Casa Minha Vida. Fale agora com um consultor e descubra
+      quanto a sua família pode economizar.
+    </p>
+    <div class="pill-row">
+      <span class="pill">Aceita MCMV</span>
+      <span class="pill">Subsídio até R$ 75 mil</span>
+      <span class="pill">Parcelas a partir de R$ 588</span>
+      <span class="pill">Portaria 24h</span>
+      <span class="pill">Lazer completo</span>
+    </div>
+    <div class="inline-cta" style="justify-content: center;">
+      <a class="btn btn-primary" data-wa="cta_final" href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43z"/></svg>
+        Simular meu financiamento
+      </a>
+      <a class="btn btn-ghost" data-wa="cta_final_secundario" href="#" style="background: transparent; color: var(--cream); border-color: rgba(246,239,222,.4);">
+        Tirar dúvidas
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="foot">
+  <div class="container">
+    <div class="logos">
+      <span class="chip"><img src="assets/logos/logo-blendi.png" alt="Blendi Empreendimentos" /></span>
+      <span class="chip"><img src="assets/logos/logo-miranti-transparente.png" alt="Residencial Mirantti" /></span>
+      <span class="chip"><img src="assets/hero/minha-casa-mimha-vida.png" alt="Minha Casa Minha Vida" /></span>
+    </div>
+    <div class="row">
+      <div>
+        <h4>Residencial Mirantti</h4>
+        <p>Um condomínio-clube pensado nos mínimos detalhes para oferecer infraestrutura, lazer e tranquilidade para toda a família.</p>
+        <p style="margin-top:10px;">📍 Rua Álvaro Grotti, 325 — Londrina/PR</p>
+      </div>
+      <div>
+        <h4>Blendi Empreendimentos</h4>
+        <p>Incorporadora responsável pelo Residencial Mirantti.</p>
+      </div>
+      <div>
+        <h4>Fale com a gente</h4>
+        <p>WhatsApp: <a data-wa="footer" href="#">+55 41 9648-6014</a></p>
+        <p>Atendimento de segunda a sábado, das 9h às 19h.</p>
+      </div>
+    </div>
+    <div class="legal">
+      Residencial Mirantti · Registro de Incorporação sob nº R-3/122.114 no Serviço de Registro de Imóveis de Londrina/PR.
+      Imagens meramente ilustrativas. Móveis, objetos, revestimentos, paisagismo e acabamentos são sugestões de decoração
+      e não fazem parte do contrato. A vegetação será entregue em fase de crescimento.
+      Consulte a memória descritiva, tabela de preços e condições com os consultores.
+      Impresso em Julho/2026.
+    </div>
+  </div>
+</footer>
+
+<!-- ========== BOTÃO WHATSAPP FLUTUANTE ========== -->
+<a class="wa-fab" data-wa="flutuante" href="#" aria-label="Falar no WhatsApp">
+  <span class="pulse-ring"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.14 1.6 5.95L0 24l6.27-1.64a11.92 11.92 0 005.77 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.43zM12.05 21.8h-.01a9.86 9.86 0 01-5.02-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.85 9.85 0 01-1.51-5.28c0-5.45 4.43-9.88 9.87-9.88 2.64 0 5.11 1.03 6.97 2.89a9.8 9.8 0 012.89 6.99c0 5.45-4.43 9.88-9.87 9.88z"/></svg>
+  <span class="wa-fab-label">Fale conosco</span>
+</a>
+
+<script>
+(function () {
+  /* ====== WhatsApp: número e mensagem com origem ====== */
+  const PHONE = '554196486014';
+
+  // Mensagens diferentes por botão, todas identificando a origem.
+  const MESSAGES = {
+    nav:                  'Olá! Vim pelo site do Mirantti (menu). Quero saber mais sobre o Residencial Mirantti.',
+    hero_principal:       'Olá! Vim pelo site do Mirantti (botão principal do topo). Quero simular o valor da parcela e o subsídio do Minha Casa Minha Vida.',
+    sobre:                'Olá! Vim pelo site do Mirantti (seção "Sobre"). Quero conhecer mais detalhes do empreendimento.',
+    galeria_condominio:   'Olá! Vim pelo site do Mirantti (galeria do condomínio). Quero descobrir o valor da parcela para um apartamento.',
+    lazer:                'Olá! Vim pelo site do Mirantti (seção de lazer). Quero simular online um financiamento.',
+    plantas:              'Olá! Vim pelo site do Mirantti (seção de plantas). Quero saber quanto subsídio do Minha Casa Minha Vida eu consigo.',
+    apartamento:          'Olá! Vim pelo site do Mirantti (seção do apartamento). Quero agendar uma visita para conhecer o apartamento decorado.',
+    localizacao:          'Olá! Vim pelo site do Mirantti (seção de localização). Quero falar com um consultor sobre a região do Mirantti.',
+    cta_final:            'Olá! Vim pelo site do Mirantti (CTA final). Quero simular meu financiamento com as condições de lançamento.',
+    cta_final_secundario: 'Olá! Vim pelo site do Mirantti (CTA final). Tenho algumas dúvidas sobre o Mirantti.',
+    footer:               'Olá! Vim pelo site do Mirantti (rodapé). Quero falar com um consultor.',
+    flutuante:            'Olá! Vim pelo site do Mirantti (botão flutuante). Quero mais informações sobre o Residencial Mirantti.'
+  };
+
+  function waUrl(origin) {
+    const msg = MESSAGES[origin] || 'Olá! Vim pelo site do Mirantti.';
+    return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg);
+  }
+
+  document.querySelectorAll('[data-wa]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const origin = el.getAttribute('data-wa') || 'flutuante';
+      window.open(waUrl(origin), '_blank', 'noopener');
+    });
+  });
+
+  /* ====== Carrosséis (pontos + setas) ====== */
+  document.querySelectorAll('[data-gallery]').forEach((g) => {
+    const track = g.querySelector('.gallery-track');
+    const prev  = g.querySelector('[data-prev]');
+    const next  = g.querySelector('[data-next]');
+    const dotsEl = g.querySelector('[data-dots]');
+    const cards = Array.from(track.children);
+
+    // Cria dots
+    cards.forEach((_, i) => {
+      const d = document.createElement('span');
+      d.className = 'dot';
+      if (i === 0) d.classList.add('active');
+      dotsEl.appendChild(d);
+    });
+    const dots = dotsEl.querySelectorAll('.dot');
+
+    function pageWidth() {
+      const card = cards[0];
+      const style = getComputedStyle(track);
+      const gap = parseFloat(style.columnGap || style.gap || '14');
+      return card.getBoundingClientRect().width + gap;
+    }
+    function scrollByPage(dir) {
+      track.scrollBy({ left: dir * pageWidth(), behavior: 'smooth' });
+    }
+    prev.addEventListener('click', () => scrollByPage(-1));
+    next.addEventListener('click', () => scrollByPage(1));
+
+    track.addEventListener('scroll', () => {
+      const w = pageWidth();
+      const idx = Math.round(track.scrollLeft / w);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }, { passive: true });
+  });
+
+  /* ====== Slideshow do hero ====== */
+  document.querySelectorAll('[data-hero-slides]').forEach((card) => {
+    const slides = Array.from(card.querySelectorAll('.slides img'));
+    const dots   = Array.from(card.querySelectorAll('.dots-slides span'));
+    if (slides.length < 2) return;
+
+    let i = 0;
+    let timer = null;
+    const INTERVAL = 4500;
+
+    function show(idx) {
+      i = (idx + slides.length) % slides.length;
+      slides.forEach((img, k) => img.classList.toggle('is-active', k === i));
+      dots.forEach((d, k)   => d.classList.toggle('is-active', k === i));
+    }
+    function next() { show(i + 1); restart(); }
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(() => show(i + 1), INTERVAL);
+    }
+
+    // Pausa quando a aba não está visível (evita "pular" fotos em background)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) clearInterval(timer);
+      else restart();
+    });
+
+    show(0);
+    restart();
+  });
+
+  /* ====== Carrossel do apartamento (sem controles, snap) ====== */
+  // Snap funciona via CSS scroll-snap-type. Nada a fazer aqui.
+
+  /* ====== Animação on-scroll ====== */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) {
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+})();
+</script>
+
+</body>
+</html>
