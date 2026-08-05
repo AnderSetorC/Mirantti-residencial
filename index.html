@@ -348,6 +348,118 @@
     to   { transform: translateX(-50%); }
   }
 
+  /* ====== Banner promocional (faixa dupla) ====== */
+  .promo-banner {
+    background: var(--green-d);
+    overflow: hidden;
+    padding: 0;
+  }
+  .promo-banner .promo-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+  .promo-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 26px 20px;
+    text-align: center;
+  }
+  .promo-left .p-a {
+    font-family: var(--serif);
+    font-weight: 700;
+    color: var(--cream);
+    font-size: clamp(22px, 4.4vw, 34px);
+    line-height: 1.12;
+  }
+  .promo-left .p-a em { font-style: normal; color: var(--green-l); }
+  .promo-divider { display: none; }
+  .promo-left .p-b { line-height: 1.05; }
+  .promo-left .p-b .small {
+    display: block;
+    font-size: clamp(14px, 2.6vw, 20px);
+    color: rgba(246,239,222,.85);
+    font-weight: 500;
+  }
+  .promo-left .p-b .big {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 700;
+    color: var(--green-l);
+    font-size: clamp(34px, 8vw, 58px);
+    line-height: 1;
+  }
+  .promo-right {
+    background: var(--green-l);
+    color: var(--green-d);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .promo-right .p-c {
+    font-family: var(--serif);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(22px, 5vw, 38px);
+    line-height: 1.02;
+    letter-spacing: -.01em;
+  }
+  .promo-right .p-d .lead-sm {
+    display: block;
+    font-size: clamp(12px, 2.2vw, 15px);
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 240px;
+  }
+  .promo-right .p-d .btn-promo {
+    display: inline-block;
+    background: var(--green-d);
+    color: var(--cream);
+    border-radius: 999px;
+    padding: 13px 30px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: transform .18s ease, background .18s ease;
+  }
+  .promo-right .p-d .btn-promo:hover {
+    background: var(--green-d2);
+    transform: translateY(-2px);
+  }
+  @media (min-width: 900px) {
+    .promo-banner .promo-inner { grid-template-columns: 1.05fr 1fr; }
+    .promo-left {
+      justify-content: flex-end;
+      gap: 34px;
+      padding: 34px 60px 34px 28px;
+      text-align: left;
+    }
+    .promo-divider {
+      display: block;
+      width: 2px;
+      align-self: stretch;
+      background: rgba(184,211,61,.45);
+      margin: 6px 0;
+    }
+    .promo-right {
+      justify-content: flex-start;
+      gap: 34px;
+      padding: 34px 28px 34px 76px;
+      text-align: left;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 46px 50%);
+      margin-left: -46px;
+    }
+    .promo-right .p-d { text-align: left; }
+  }
+
   /* ====== Seções genéricas ====== */
   section { padding: 64px 0; }
   @media (min-width: 720px) { section { padding: 88px 0; } }
@@ -858,6 +970,27 @@
   </div>
 </header>
 
+<!-- ========== Banner promocional ========== -->
+<section class="promo-banner" aria-label="Condições especiais">
+  <div class="promo-inner">
+    <div class="promo-left">
+      <div class="p-a">Renda familiar<br />a partir de <em>R$ 2.300</em></div>
+      <div class="promo-divider" aria-hidden="true"></div>
+      <div class="p-b">
+        <span class="small">parcelas de</span>
+        <span class="big">R$ 588</span>
+      </div>
+    </div>
+    <div class="promo-right">
+      <div class="p-c">Subsídio<br />de R$ 75 mil</div>
+      <div class="p-d">
+        <span class="lead-sm">Casal com filhos tem benefícios exclusivos</span>
+        <a class="btn-promo" data-wa="banner_promo" href="#">Eu quero</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== Faixa letreiro ========== -->
 <div class="marquee" aria-hidden="true">
   <div class="track">
@@ -1228,6 +1361,7 @@
   const MESSAGES = {
     nav:                  'Olá! Vim pelo site do Mirantti (menu). Quero saber mais sobre o Residencial Mirantti.',
     hero_principal:       'Olá! Vim pelo site do Mirantti (botão principal do topo). Quero simular o valor da parcela e o subsídio do Minha Casa Minha Vida.',
+    banner_promo:         'Olá! Vim pelo site do Mirantti (banner de condições). Quero saber se me encaixo na renda de R$ 2.300 e nos benefícios para casal com filhos.',
     sobre:                'Olá! Vim pelo site do Mirantti (seção "Sobre"). Quero conhecer mais detalhes do empreendimento.',
     galeria_condominio:   'Olá! Vim pelo site do Mirantti (galeria do condomínio). Quero descobrir o valor da parcela para um apartamento.',
     lazer:                'Olá! Vim pelo site do Mirantti (seção de lazer). Quero simular online um financiamento.',
