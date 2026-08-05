@@ -200,28 +200,29 @@
   .hero-strip {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 14px;
     margin-top: 6px;
   }
-  @media (min-width: 720px) { .hero-strip { grid-template-columns: repeat(4, 1fr); } }
   .hero-strip .item {
-    background: rgba(255,255,255,.6);
+    background: rgba(255,255,255,.75);
     backdrop-filter: blur(2px);
-    border: 1px solid rgba(29,53,37,.10);
-    border-radius: 12px;
-    padding: 12px 14px;
+    border: 1px solid rgba(29,53,37,.12);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 6px 18px rgba(29,53,37,.06);
   }
   .hero-strip .item .v {
     font-family: var(--serif);
-    font-size: 22px;
+    font-size: 30px;
     color: var(--green-d);
     font-weight: 700;
     line-height: 1.1;
   }
+  @media (min-width: 720px) { .hero-strip .item .v { font-size: 36px; } }
   .hero-strip .item .k {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
   .hero-visual {
@@ -831,8 +832,6 @@
         <div class="hero-strip">
           <div class="item"><div class="v">R$ 588</div><div class="k">a parcela</div></div>
           <div class="item"><div class="v">R$ 75 mil</div><div class="k">subsídio MCMV</div></div>
-          <div class="item"><div class="v">416</div><div class="k">unidades</div></div>
-          <div class="item"><div class="v">13</div><div class="k">blocos · 4 andares</div></div>
         </div>
       </div>
 
